@@ -21,14 +21,14 @@ services:
             - laravel-network  # Connect to the custom network
 
     mysql:
-        container_name: mysql
+        container_name: mysql1
         image: mysql:8  # Use MySQL image
         restart: always
         environment:
             MYSQL_DATABASE: laravel  # Create a database named 'laravel'
             MYSQL_ROOT_PASSWORD: root  # Set the root password for MySQL
         volumes:
-            - mysql_data:/var/lib/mysql  # Persist MySQL data
+            - mysql_data:/var/lib/mysql  # Persist MySQL data   
         networks:
             - laravel-network  # Connect to the custom network
 
